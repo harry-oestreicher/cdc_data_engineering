@@ -100,173 +100,148 @@ sexpartb_dict = {
     3: "Same sex only or both sexes"
 }
 
-
-
 """
-
-value $H8S
-" "="Missing"
-"1"="Never"
-"2"="Rarely"
-"3"="Sometimes"
-"4"="Most of the time"
-"5"="Always"
-other="** Data Error **";
-value $H9S
-" "="Missing"
-"1"="0 times"
-"2"="1 time"
-"3"="2 or 3 times"
-"4"="4 or 5 times"
-"5"="6 or more times"
-other="** Data Error **";
-value $H10S
-" "="Missing"
-"1"="Did not drive"
-"2"="0 times"
-"3"="1 time"
-"4"="2 or 3 times"
-"5"="4 or 5 times"
-"6"="6 or more times"
-other="** Data Error **";
-value $H11S
-" "="Missing"
-"1"="Did not drive"
-"2"="0 days"
-"3"="1 or 2 days"
-"4"="3 to 5 days"
-"5"="6 to 9 days"
-"6"="10 to 19 days"
-"7"="20 to 29 days"
-"8"="All 30 days"
-other="** Data Error **";
-value $H12S
-" "="Missing"
-"1"="0 days"
-"2"="1 day"
-"3"="2 or 3 days"
-"4"="4 or 5 days"
-"5"="6 or more days"
-other="** Data Error **";
-value $H13S
-" "="Missing"
-"1"="0 days"
-"2"="1 day"
-"3"="2 or 3 days"
-"4"="4 or 5 days"
-"5"="6 or more days"
-other="** Data Error **";
-value $H14S
-" "="Missing"
-"1"="0 days"
-"2"="1 day"
-"3"="2 or 3 days"
-"4"="4 or 5 days"
-"5"="6 or more days"
-other="** Data Error **";
-value $H15S
-" "="Missing"
-"1"="0 days"
-"2"="1 day"
-"3"="2 or 3 days"
-"4"="4 or 5 days"
-"5"="6 or more days"
-other="** Data Error **";
-value $H16S
-" "="Missing"
-"1"="0 times"
-"2"="1 time"
-"3"="2 or 3 times"
-"4"="4 or 5 times"
-"5"="6 or 7 times"
-"6"="8 or 9 times"
-"7"="10 or 11 times"
-"8"="12 or more times"
-other="** Data Error **";
-value $H17S
-" "="Missing"
-"1"="0 times"
-"2"="1 time"
-"3"="2 or 3 times"
-"4"="4 or 5 times"
-"5"="6 or 7 times"
-"6"="8 or 9 times"
-"7"="10 or 11 times"
-"8"="12 or more times"
-other="** Data Error **";
-value $H18S
-" "="Missing"
-"1"="0 times"
-"2"="1 time"
-"3"="2 or 3 times"
-"4"="4 or 5 times"
-"5"="6 or 7 times"
-"6"="8 or 9 times"
-"7"="10 or 11 times"
-"8"="12 or more times"
-other="** Data Error **";
-value $H19S
-" "="Missing"
-"1"="Yes"
-"2"="No"
-other="** Data Error **";
-value $H20S
-" "="Missing"
-"1"="0 times"
-"2"="1 time"
-"3"="2 or 3 times"
-"4"="4 or 5 times"
-"5"="6 or more times"
-other="** Data Error **";
-value $H21S
-" "="Missing"
-"1"="Did not date"
-"2"="0 times"
-"3"="1 time"
-"4"="2 or 3 times"
-"5"="4 or 5 times"
-"6"="6 or more times"
-other="** Data Error **";
-value $H22S
-" "="Missing"
-"1"="Did not date"
-"2"="0 times"
-"3"="1 time"
-"4"="2 or 3 times"
-"5"="4 or 5 times"
-"6"="6 or more times"
-other="** Data Error **";
-value $H23S
-" "="Missing"
-"1"="Yes"
-"2"="No"
-other="** Data Error **";
-value $H24S
-" "="Missing"
-"1"="Yes"
-"2"="No"
-other="** Data Error **";
-
 """
-
+q8_dict = {
+    1: "Never",
+    2: "Rarely",
+    3: "Sometimes",
+    4: "Most of the time",
+    5: "Always"
+}
+q9_dict = {
+    1: "0 times",
+    2: "1 time",
+    3: "2 or 3 times",
+    4: "4 or 5 times",
+    5: "6 or more times"
+}
+q10_dict = {
+    1: "Did not drive",
+    2: "0 times",
+    3: "1 time",
+    4: "2 or 3 times",
+    5: "4 or 5 times",
+    6: "6 or more times"
+}
+q11_dict = {
+    1: "Did not drive",
+    2: "0 days",
+    3: "1 or 2 days",
+    4: "3 to 5 days",
+    5: "6 to 9 days",
+    6: "10 to 19 days",
+    7: "20 to 29 days",
+    8: "All 30 days"
+}
+q12_dict = {
+    1: "0 days",
+    2: "1 day",
+    3: "2 or 3 days",
+    4: "4 or 5 days",
+    5: "6 or more days"
+}
+q13_dict = {
+    1: "0 days",
+    2: "1 day",
+    3: "2 or 3 days",
+    4: "4 or 5 days",
+    5: "6 or more days"
+}
+q14_dict = {
+    1: "0 days",
+    2: "1 day",
+    3: "2 or 3 days",
+    4: "4 or 5 days",
+    5: "6 or more days"
+}
+q15_dict = {
+    1: "0 days",
+    2: "1 day",
+    3: "2 or 3 days",
+    4: "4 or 5 days",
+    5: "6 or more days"
+}
+q16_dict = {
+    1: "0 times",
+    2: "1 time",
+    3: "2 or 3 times",
+    4: "4 or 5 times",
+    5: "6 or 7 times",
+    6: "8 or 9 times",
+    7: "10 or 11 times",
+    8: "12 or more times"
+}
+q17_dict = {
+    1: "0 times",
+    2: "1 time",
+    3: "2 or 3 times",
+    4: "4 or 5 times",
+    5: "6 or 7 times",
+    6: "8 or 9 times",
+    7: "10 or 11 times",
+    8: "12 or more times"
+}
+q18_dict = {
+    1: "0 times",
+    2: "1 time",
+    3: "2 or 3 times",
+    4: "4 or 5 times",
+    5: "6 or 7 times",
+    6: "8 or 9 times",
+    7: "10 or 11 times",
+    8: "12 or more times"
+}
+q19_dict = {
+    1: "Yes",
+    2: "No"
+}
+q20_dict = {
+    1: "0 times",
+    2: "1 time",
+    3: "2 or 3 times",
+    4: "4 or 5 times",
+    5: "6 or more times"
+}
+q21_dict = {
+    1: "Did not date",
+    2: "0 times",
+    3: "1 time",
+    4: "2 or 3 times",
+    5: "4 or 5 times",
+    6: "6 or more times"
+}
+q22_dict = {
+    1: "Did not date",
+    2: "0 times",
+    3: "1 time",
+    4: "2 or 3 times",
+    5: "4 or 5 times",
+    6: "6 or more times"
+}
+q23_dict = {
+    1: "Yes",
+    2: "No"
+}
+q24_dict = {
+    1: "Yes",
+    2: "No"
+}
 q25_dict = {
     0: "",
     1: "Yes",
     2: "No"
 }
-
 q26_dict = {
     0: "",
     1: "Yes",
     2: "No"
 }
-
 q27_dict = {
     0: "",
     1: "Yes",
     2: "No"
 }
-
 q28_dict = {
     0: "",
     1: "0 times",
@@ -275,7 +250,6 @@ q28_dict = {
     4: "4 or 5 times",
     5: "6 or more times"
 }
-
 q29_dict = {
     0: "",
     1: "Did not attempt suicide",
