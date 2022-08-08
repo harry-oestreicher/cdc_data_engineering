@@ -4,6 +4,16 @@ import pandas as pd
 TEST
 
 """
+
+def labelize(dict_in):
+    
+    for key, value in dict_in.items():
+        print(key, '->', value)
+        # if dict_in.items(key) ==
+
+    return
+    
+
 def column_formatter(col_in):
 
     if col_in == "site":
@@ -130,97 +140,57 @@ def column_formatter(col_in):
         val = race4.get(col_in)
 
     elif col_in == "race7":
-        sex = {
+        race7 = {
             1: "Female",
             2: "Male",
         }
-        val = sex.get(col_in)
+        val = race7.get(col_in)
+        
     elif col_in == "q66":
-        sex = {
+        q66 = {
             1: "Female",
             2: "Male",
         }
-        val = sex.get(col_in)
+        val = q66.get(col_in)
+        
     elif col_in == "q65":
-        sex = {
+        q65 = {
             1: "Female",
             2: "Male",
         }
-        val = sex.get(col_in)
-    elif col_in == "sex":
-        sex = {
-            1: "Female",
-            2: "Male",
+        val = q65.get(col_in)
+        
+    elif col_in == "sexid":
+        sexid = {
+            1: "Heterosexual",
+            2: "Gay or Lesbian",
+            3: "Bisexual",
+            4: "Not Sure"
         }
-        val = sex.get(col_in)
-    elif col_in == "sex":
-        sex = {
-            1: "Female",
-            2: "Male",
+        val = sexid.get(col_in)
+        
+    elif col_in == "sexidb":
+        sexidb = {
+            1: "Heterosexual",
+            2: "Sexual Minority",
+            3: "Unsure"
         }
-        val = sex.get(col_in)
+        val = sexidb.get(col_in)
 
+    elif col_in == "sexpart":
+        sexpart = {
+            1: "Never had sex",
+            2: "Opposite sex only",
+            3: "Same sex only",
+            4: "Both Sexes"
+        }
+        val = sexpart.get(col_in)
 
-
-value GRADE
-
-value RACE
-
-value RACE7S
-1="Am Indian / Alaska Native"
-2="Asian"
-3="Black or African American"
-4="Hispanic/Latino"
-5="Native Hawaiian/other PI"
-6="White"
-7="Multiple - Non-Hispanic";
-value $H66S
-" "="Missing"
-"1"="Heterosexual (straight)"
-"2"="Gay or lesbian"
-"3"="Bisexual"
-"4"="Not sure"
-other="** Data Error **";
-value $H65S
-" "="Missing"
-"1"="Never had sexual contact"
-"2"="Females"
-"3"="Males"
-"4"="Females and males"
-other="** Data Error **";
-value SEXID
-1="Heterosexual"
-2="Gay or Lesbian"
-3="Bisexual"
-4="Not Sure";   
-value SEXIDB
-1="Heterosexual"
-2="Sexual Minority"
-3="Unsure";
-value SEXPART
-1="Never had sex"
-2="Opposite sex only"
-3="Same sex only"
-4="Both Sexes";
-value SEXPARTB
-1="Never had sex"
-2="Opposite sex only"
-3="Same sex only or both sexes";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    elif col_in == "sexpartb":
+        sexpartb = {
+            1: "Never had sex",
+            2: "Opposite sex only",
+            3: "Same sex only or both sexes"
+        }
+        val = sexpartb.get(col_in)
     return val
