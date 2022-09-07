@@ -5,6 +5,7 @@ __pycache__/
 
 .ipynb_checkpoints/
 data/
+data_origin/
 .DS_Store/
 
 # C extensions
