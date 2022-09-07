@@ -33,7 +33,8 @@ HVPlot
 
 1. Clone this repository:
 
-2. Download the converted data (CSV format) These were converted from MS ACCESS files [CDC.gov](https://www.cdc.gov/healthyyouth/data/yrbs/data.htm) [Download Data](https://rhel8.test/cdc_origin_data_2022-09-07.tar.gz)
+2. Download the converted data (CSV format) These were converted from MS ACCESS files [CDC.gov](https://www.cdc.gov/healthyyouth/data/yrbs/data.htm)
+  *[Download from local server](https://rhel8.test/cdc_origin_data_2022-09-07.tar.gz)*
 
 3. Extract the CSV files into the `/origin_data` folder.
 
