@@ -4,8 +4,9 @@ __pycache__/
 *$py.class
 
 .ipynb_checkpoints/
-data/
-origin_data/
+data/*.db
+origin_data/*.csv
+origin_data/docs
 .DS_Store/
 tmp/
 
