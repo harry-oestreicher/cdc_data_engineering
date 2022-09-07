@@ -7,6 +7,8 @@ __pycache__/
 data/
 origin_data/
 .DS_Store/
+tmp/
+
 
 # C extensions
 *.so
