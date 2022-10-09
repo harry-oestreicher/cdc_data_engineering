@@ -764,379 +764,373 @@ q89_dict = {
 5: "Mostly F's",
 6: "None of these grades",
 7: "Not sure"
+}   
+    
+
+
+BIKE_dict = {
+1: "Did not ride a bicycle",
+2: "Never wore a helmet",
+3: "Rarely wore a helmet",
+4: "Sometimes wore a helmet",
+5: "Most of the time wore a helmet",
+6: "Always wore a helmet",
 }
 
+DRVMARJ_dict = {
+1: "Did not drive",
+2: "0 times",
+3: "1 time",
+4: "2 or 3 times",
+5: "4 or 5 times",
+6: "6 or more times"
+}
 
-"""
-value $BIKE
-' '='Missing'
-'1'="Did not ride a bicycle"
-'2'="Never wore a helmet"
-'3'="Rarely wore a helmet"
-'4'="Sometimes wore a helmet"
-'5'="Most of the time wore a helmet"
-'6'="Always wore a helmet"
-other='** Data Error **';
-value $DRVMARJ
-' '='Missing'
-'1'="Did not drive"
-'2'="0 times"
-'3'="1 time"
-'4'="2 or 3 times"
-'5'="4 or 5 times"
-'6'="6 or more times"
-other='** Data Error **';
-value $CELLDRV
-" "="Missing"
-"1"="Did not drive"
-"2"="0 days"
-"3"="1 or 2 days"
-"4"="3 to 5 days"
-"5"="6 to 9 days"
-"6"="10 to 19 days"
-"7"="20 to 29 days"
-"8"="All 30 days"
-other="** Data Error **";
-value $PROPDAM
-' '='Missing'
-'1'="0 times"
-'2'="1 time"
-'3'="2 or 3 times"
-'4'="4 or 5 times"
-'5'="6 or 7 times"
-'6'="8 or 9 times"
-'7'="10 or 11 times"
-'8'="12 or more times"
-other='** Data Error **';
-value $BULLWGT
-" "="Missing"
-"1"="Yes"
-"2"="No"
-other="** Data Error **";
-value $BULLGEND
-' '='Missing'
-'1'="Yes"
-'2'="No"
-other='** Data Error **';
-value $BULLGAY
-" "="Missing"
-"1"="Yes"
-"2"="No"
-other="** Data Error **";
-value $CHOKE
-' '='Missing'
-'1'="Yes"
-'2'="No"
-other='** Data Error **';
-value $CIGS
-" "="Missing"
-"1"="0 days"
-"2"="1 or 2 days"
-"3"="3 to 5 days"
-"4"="6 to 9 days"
-"5"="10 to 19 days"
-"6"="20 to 29 days"
-"7"="All 30 days"
-other="** Data Error **";
-value $CHEWTOB
-" "="Missing"
-"1"="0 days"
-"2"="1 or 2 days"
-"3"="3 to 5 days"
-"4"="6 to 9 days"
-"5"="10 to 19 days"
-"6"="20 to 29 days"
-"7"="All 30 days"
-other="** Data Error **";
-value $ALCSCH
-" "="Missing"
-"1"="0 days"
-"2"="1 or 2 days"
-"3"="3 to 5 days"
-"4"="6 to 9 days"
-"5"="10 to 19 days"
-"6"="20 to 29 days"
-"7"="All 30 days"
-other="** Data Error **";
-value $ALCTYPE
-" "="Missing"
-"1"="I did not drink alcohol during the past 30 days"
-"2"="Beer"
-"3"="Wine"
-"4"="Vodka"
-"5"="Some other liquor"
-"6"="Flavored alcoholic beverages"
-"7"="Some other type"
-other="** Data Error **";
-value $HOWMARJ
-" "="Missing"
-"1"="I did not use marijuana during the past 30 days"
-"2"="I smoked it in a joint, bong, pipe, or blunt"
-"3"="I ate it in food such as brownies, cakes, cookies, or candy"
-"4"="I drank it in tea, cola, alcohol, or other drinks"
-"5"="I vaporized it"
-"6"="I used it some other way"
-other="** Data Error **";
-value $MARIJSCH
-" "="Missing"
-"1"="0 times"
-"2"="1 or 2 times"
-"3"="3 to 9 times"
-"4"="10 to 19 times"
-"5"="20 to 39 times"
-"6"="40 or more times"
-other="** Data Error **";
-value $CURROPI
-" "="Missing"
-"1"="0 times"
-"2"="1 or 2 times"
-"3"="3 to 9 times"
-"4"="10 to 19 times"
-"5"="20 to 39 times"
-"6"="40 or more times"
-other="** Data Error **";
-value $CURRCOC
-" "="Missing"
-"1"="0 times"
-"2"="1 or 2 times"
-"3"="3 to 9 times"
-"4"="10 to 19 times"
-"5"="20 to 39 times"
-"6"="40 or more times"
-other="** Data Error **";
-value $CURRHER
-' '='Missing'
-'1'="0 times"
-'2'="1 or 2 times"
-'3'="3 to 9 times"
-'4'="10 to 19 times"
-'5'="20 to 39 times"
-'6'="40 or more times"
-other='** Data Error **';
-value $CURRMETH
-' '='Missing'
-'1'="0 times"
-'2'="1 or 2 times"
-'3'="3 to 9 times"
-'4'="10 to 19 times"
-'5'="20 to 39 times"
-'6'="40 or more times"
-other='** Data Error **';
-value $LSD
-" "="Missing"
-"1"="0 times"
-"2"="1 or 2 times"
-"3"="3 to 9 times"
-"4"="10 to 19 times"
-"5"="20 to 39 times"
-"6"="40 or more times"
-other="** Data Error **";
-value $DRUG30D
-" "="Missing"
-"1"="0 times"
-"2"="1 or 2 times"
-"3"="3 to 9 times"
-"4"="10 to 19 times"
-"5"="20 to 39 times"
-"6"="40 or more times"
-other="** Data Error **";
-value $EXPRESS
-" "="Missing"
-"1"="Very feminine"
-"2"="Mostly feminine"
-"3"="Somewhat feminine"
-"4"="Equally feminine and masculine"
-"5"="Somewhat masculine"
-"6"="Mostly masculine"
-"7"="Very masculine"
-other="** Data Error **";
-value $THIV
-' '='Missing'
-'1'="Yes"
-'2'="No"
-'3'="Not sure"
-other='** Data Error **';
-value $TSEXED
-" "="Missing"
-"1"="Yes"
-"2"="No"
-"3"="Not sure"
-other="** Data Error **";
-value $TSTD
-" "="Missing"
-"1"="Yes"
-"2"="No"
-"3"="Not sure"
-other="** Data Error **";
-value $TCOND
-' '='Missing'
-'1'="Yes"
-'2'="No"
-'3'="Not sure"
-other='** Data Error **';
-value $TBC
-" "="Missing"
-"1"="Yes"
-"2"="No"
-"3"="Not sure"
-other="** Data Error **";
-value $DIETPOP
-" "="Missing"
-"1"="Did not drink diet soda or pop"
-"2"="1 to 3 times"
-"3"="4 to 6 times"
-"4"="1 time per day"
-"5"="2 times per day"
-"6"="3 times per day"
-"7"="4 or more times per day"
-other="** Data Error **";
-value $COFFEE
-" "="Missing"
-"1"="Did not drink coffee or tes"
-"2"="1 to 3 times"
-"3"="4 to 6 times"
-"4"="1 time per day"
-"5"="2 times per day"
-"6"="3 times per day"
-"7"="4 or more times per day"
-other="** Data Error **";
-value $SPRTDRNK
-" "="Missing"
-"1"="Did not drink sports drink"
-"2"="1 to 3 times"
-"3"="4 to 6 times"
-"4"="1 time per day"
-"5"="2 times per day"
-"6"="3 times per day"
-"7"="4 or more times per day"
-other="** Data Error **";
-value $ENRGDRNK
-" "="Missing"
-"1"="Did not drink energy drink"
-"2"="1 to 3 times"
-"3"="4 to 6 times"
-"4"="1 time per day"
-"5"="2 times per day"
-"6"="3 times per day"
-"7"="4 or more times per day"
-other="** Data Error **";
-value $SGRDRNK
-" "="Missing"
-"1"="Did not drink sugar drinks"
-"2"="1 to 3 times"
-"3"="4 to 6 times"
-"4"="1 time per day"
-"5"="2 times per day"
-"6"="3 times per day"
-"7"="4 or more times per day"
-other="** Data Error **";
-value $WATER
-" "="Missing"
-"1"="Did not drink water"
-"2"="1 to 3 times"
-"3"="4 to 6 times"
-"4"="1 time per day"
-"5"="2 times per day"
-"6"="3 times per day"
-"7"="4 or more times per day"
-other="** Data Error **";
-value $FASTFOOD
-" "="Missing"
-"1"="0 days"
-"2"="1 day"
-"3"="2 days"
-"4"="3 days"
-"5"="4 days"
-"6"="5 days"
-"7"="6 days"
-"8"="7 days"
-other="** Data Error **";
-value $ALLERGY
-" "="Missing"
-"1"="Yes"
-"2"="No"
-"3"="Not sure"
-other="** Data Error **";
-value $HUNGRY
-' '='Missing'
-'1'="Never"
-'2'="Rarely"
-'3'="Sometimes"
-'4'="Most of the time"
-'5'="Always"
-other='** Data Error **';
-value $MUSCLE
-" "="Missing"
-"1"="0 days"
-"2"="1 day"
-"3"="2 days"
-"4"="3 days"
-"5"="4 days"
-"6"="5 days"
-"7"="6 days"
-"8"="7 days"
-other="** Data Error **";
-value $SUNSCR
-" "="Missing"
-"1"="Never"
-"2"="Rarely"
-"3"="Sometimes"
-"4"="Most of the time"
-"5"="Always"
-other="** Data Error **";
-value $SUNTAN
-" "="Missing"
-"1"="0 times"
-"2"="1 or 2 times"
-"3"="3 to 9 times"
-"4"="10 to 19 times"
-"5"="20 to 39 times"
-"6"="40 or more times"
-other="** Data Error **";
-value $SUNBURN
-" "="Missing"
-"1"="0 times"
-"2"="1 time"
-"3"="2 times"
-"4"="3 times"
-"5"="4 times"
-"6"="5 or more times"
-other="** Data Error **";
-value $CONCEN
-" "="Missing"
-"1"="Yes"
-"2"="No"
-other="** Data Error **";
-value $CURRASTH
-" "="Missing"
-"1"="I have never had asthma"
-"2"="Yes"
-"3"="No"
-"4"="Not Sure"
-other="** Data Error **";
-value $WHSLP
-' '='Missing'
-'1'="Parent's or guardian's home"
-'2'="Home of friend/family/other"
-'3'="Shelter or emergency housing"
-'4'="Motel or hotel"
-'5'="Car, park, campground"
-'6'="No usual place to sleep"
-'7'="Somewhere else"
-other='** Data Error **';
-value $ENGLISH
-" "="Missing"
-"1"="Very well"
-"2"="Well"
-"3"="Not Well"
-"4"="Not at all"
-other="** Data Error **";
-value $TRNS
-' '='Missing'
-'1'="No"
-'2'="Yes, I am transgender"
-'3'="Not sure if I am transgender"
-'4'="DK what question is asking"
-other='** Data Error **';
+CELLDRV_dict = {
+1: "Did not drive",
+2: "0 days",
+3: "1 or 2 days",
+4: "3 to 5 days",
+5: "6 to 9 days",
+6: "10 to 19 days",
+7: "20 to 29 days",
+8: "All 30 days"
+}
 
-"""
+PROPDAM_dict = {
+1: "0 times",
+2: "1 time",
+3: "2 or 3 times",
+4: "4 or 5 times",
+5: "6 or 7 times",
+6: "8 or 9 times",
+7: "10 or 11 times",
+8: "12 or more times"
+}
+
+BULLWGT_dict = {
+1: "Yes",
+2: "No"
+}
+
+BULLGEND_dict = {
+1: "Yes",
+2: "No"
+}
+
+BULLGAY_dict = {
+1: "Yes",
+2: "No"
+}
+
+CHOKE_dict = {
+1: "Yes",
+2: "No",
+}
+
+CIGS_dict = {
+1: "0 days",
+2: "1 or 2 days",
+3: "3 to 5 days",
+4: "6 to 9 days",
+5: "10 to 19 days",
+6: "20 to 29 days",
+7: "All 30 days"
+}
+
+CHEWTOB_dict = {
+1: "0 days",
+2: "1 or 2 days",
+3: "3 to 5 days",
+4: "6 to 9 days",
+5: "10 to 19 days",
+6: "20 to 29 days",
+7: "All 30 days"
+}
+
+ALCSCH_dict = {
+1: "0 days",
+2: "1 or 2 days",
+3: "3 to 5 days",
+4: "6 to 9 days",
+5: "10 to 19 days",
+6: "20 to 29 days",
+7: "All 30 days"
+}
+
+ALCTYPE_dict = {
+1: "I did not drink alcohol during the past 30 days",
+2: "Beer",
+3: "Wine",
+4: "Vodka",
+5: "Some other liquor",
+6: "Flavored alcoholic beverages",
+7: "Some other type"
+}
+
+HOWMARJ_dict = {
+1: "I did not use marijuana during the past 30 days",
+2: "I smoked it in a joint, bong, pipe, or blunt",
+3: "I ate it in food such as brownies, cakes, cookies, or candy",
+4: "I drank it in tea, cola, alcohol, or other drinks",
+5: "I vaporized it",
+6: "I used it some other way",
+}
+
+MARIJSCH_dict = {
+1: "0 times",
+2: "1 or 2 times",
+3: "3 to 9 times",
+4: "10 to 19 times",
+5: "20 to 39 times",
+6: "40 or more times"
+}
+
+CURROPI_dict = {
+1: "0 times",
+2: "1 or 2 times",
+3: "3 to 9 times",
+4: "10 to 19 times",
+5: "20 to 39 times",
+6: "40 or more times"
+}
+
+CURRCOC_dict = {
+1: "0 times",
+2: "1 or 2 times",
+3: "3 to 9 times",
+4: "10 to 19 times",
+5: "20 to 39 times",
+6: "40 or more times"
+}
+
+CURRHER_dict = {
+1: "0 times",
+2: "1 or 2 times",
+3: "3 to 9 times",
+4: "10 to 19 times",
+5: "20 to 39 times",
+6: "40 or more times"
+}
+CURRMETH_dict = {
+1: "0 times",
+2: "1 or 2 times",
+3: "3 to 9 times",
+4: "10 to 19 times",
+5: "20 to 39 times",
+6: "40 or more times"
+}
+
+LSD_dict = {
+1: "0 times",
+2: "1 or 2 times",
+3: "3 to 9 times",
+4: "10 to 19 times",
+5: "20 to 39 times",
+6: "40 or more times"
+}
+
+DRUG30D_dict = {
+1: "0 times",
+2: "1 or 2 times",
+3: "3 to 9 times",
+4: "10 to 19 times",
+5: "20 to 39 times",
+6: "40 or more times"
+}
+
+EXPRESS_dict = {
+1: "Very feminine",
+2: "Mostly feminine",
+3: "Somewhat feminine",
+4: "Equally feminine and masculine",
+5: "Somewhat masculine",
+6: "Mostly masculine",
+7: "Very masculine"
+}
+
+THIV_dict = {
+1: "Yes",
+2: "No",
+3: "Not sure"
+}
+
+TSEXED_dict = {
+1: "Yes",
+2: "No",
+3: "Not sure"
+}
+
+TSTD_dict = {
+1: "Yes",
+2: "No",
+3: "Not sure"
+}
+
+TCOND_dict = {
+1: "Yes",
+2: "No",
+3: "Not sure",
+}
+
+TBC_dict = {
+1: "Yes",
+2: "No",
+3: "Not sure"
+}
+
+DIETPOP_dict = {
+1: "Did not drink diet soda or pop",
+2: "1 to 3 times",
+3: "4 to 6 times",
+4: "1 time per day",
+5: "2 times per day",
+6: "3 times per day",
+7: "4 or more times per day"
+}
+
+COFFEE_dict = {
+1: "Did not drink coffee or tes",
+2: "1 to 3 times",
+3: "4 to 6 times",
+4: "1 time per day",
+5: "2 times per day",
+6: "3 times per day",
+7: "4 or more times per day"
+}
+
+SPRTDRNK_dict = {
+1: "Did not drink sports drink",
+2: "1 to 3 times",
+3: "4 to 6 times",
+4: "1 time per day",
+5: "2 times per day",
+6: "3 times per day",
+7: "4 or more times per day"
+}
+
+ENRGDRNK_dict = {
+1: "Did not drink energy drink",
+2: "1 to 3 times",
+3: "4 to 6 times",
+4: "1 time per day",
+5: "2 times per day",
+6: "3 times per day",
+7: "4 or more times per day"
+}
+
+SGRDRNK_dict = {
+1: "Did not drink sugar drinks",
+2: "1 to 3 times",
+3: "4 to 6 times",
+4: "1 time per day",
+5: "2 times per day",
+6: "3 times per day",
+7: "4 or more times per day"
+}
+
+WATER_dict = {
+1: "Did not drink water",
+2: "1 to 3 times",
+3: "4 to 6 times",
+4: "1 time per day",
+5: "2 times per day",
+6: "3 times per day",
+7: "4 or more times per day"
+}
+
+FASTFOOD_dict = {
+1: "0 days",
+2: "1 day",
+3: "2 days",
+4: "3 days",
+5: "4 days",
+6: "5 days",
+7: "6 days",
+8: "7 days"
+}
+
+ALLERGY_dict = {
+1: "Yes",
+2: "No",
+3: "Not sure"
+}
+
+HUNGRY_dict = {
+1: "Never",
+2: "Rarely",
+3: "Sometimes",
+4: "Most of the time",
+5: "Always",
+}
+MUSCLE_dict = {
+1: "0 days",
+2: "1 day",
+3: "2 days",
+4: "3 days",
+5: "4 days",
+6: "5 days",
+7: "6 days",
+8: "7 days"
+}
+
+SUNSCR_dict = {
+1: "Never",
+2: "Rarely",
+3: "Sometimes",
+4: "Most of the time",
+5: "Always"
+}
+
+SUNTAN_dict = {
+1: "0 times",
+2: "1 or 2 times",
+3: "3 to 9 times",
+4: "10 to 19 times",
+5: "20 to 39 times",
+6: "40 or more times"
+}
+
+SUNBURN_dict = {
+1: "0 times",
+2: "1 time",
+3: "2 times",
+4: "3 times",
+5: "4 times",
+6: "5 or more times"
+}
+
+CONCEN_dict = {
+1: "Yes",
+2: "No"
+}
+
+CURRASTH_dict = {
+1: "I have never had asthma",
+2: "Yes",
+3: "No",
+4: "Not Sure"
+}
+
+WHSLP_dict = {
+1: "Parent's or guardian's home",
+2: "Home of friend/family/other",
+3: "Shelter or emergency housing",
+4: "Motel or hotel",
+5: "Car, park, campground",
+6: "No usual place to sleep",
+7: "Somewhere else",
+}
+ENGLISH_dict = {
+1: "Very well",
+2: "Well",
+3: "Not Well",
+4: "Not at all"
+}
+
+TRNS_dict = {
+1: "No",
+2: "Yes, I am transgender",
+3: "Not sure if I am transgender",
+4: "DK what question is asking",
+}
