@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-# import os
+import sys
 import logging
 import streamlit as st
 import pandas as pd
 import numpy as np
+
+
 # import streamlit.components.v1 as components
 
 # from pickle import load
@@ -13,8 +15,8 @@ from src.dataio import get_data
 # from sklearn.ensemble import RandomForestRegressor
 
 # SQL query to pull data from local source
-query_str = "SELECT * FROM STATE;"
-df = get_data(query_str)
+# query_str = "SELECT * FROM DISTRICT WHERE `sitecode` = 'CH';"
+# df = get_data(query_str)
 
 # Streamlit options
 st.set_page_config(layout="wide")

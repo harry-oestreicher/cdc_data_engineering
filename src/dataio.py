@@ -11,21 +11,24 @@ engine = create_engine(connection_string)
 insp = inspect(engine)
 # print(insp.get_table_names())
 
-# def init_data():
-#     """
-#     Purpose:
-#         Initialize system data from local CSV files for reproducability
-#     Input:
-#         None
-#     Output (pd.DataFrame):
-#         Produces pandas DataFrames and corresponding SQL tables in SQLlite db file.
+def init_data():
+    """
+    Purpose:
+        Initialize system data from local CSV files for reproducability
+    Input:
+        None
+    Output (pd.DataFrame):
+        Produces pandas DataFrames and corresponding SQL tables in SQLlite db file.
     
-#     """
-#     sp500_df = pd.read_csv(data_file, delimiter=",") #.rename(columns={"Unnamed: 0":"Ticker"})
-#     sp500_df.to_sql('sp500', engine, index_label="Ticker", index=False, if_exists='replace')
-#     sp500_df.set_index("Ticker", inplace=True)
+    """
+    # df = pd.read_csv(data_file, delimiter=",") #.rename(columns={"Unnamed: 0":"Ticker"})
+    # df.to_sql('df', engine, if_exists='replace')
+    # df.drop(columns=["sitetype", "sitetypenum", "survyear", "record"], inplace=True)
+    
+    # df.to_sql('df', engine, index_label="Ticker", index=False, if_exists='replace')
+    # df.set_index("Ticker", inplace=True)
 
-#     return sp500_df
+    return None
 
 def get_data(query):
     """
