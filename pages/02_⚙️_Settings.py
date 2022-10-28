@@ -12,15 +12,11 @@ def main():
     st.title("System Settings and Data", anchor=None)
     st.markdown("Manage database, users, etc.")
     st.markdown("---")
-
-    btn =  st.button("View top 10 DISTRICT records")
+    dist = st.radio('District:', ('NYC', 'CH', 'SF'))
+    btn =  st.button(f"Initialize dataset with {dist} District results")
     if btn:
         # re-initialize the database
-        query_str="SELECT * FROM DISTRICT WHERE `sitecode` = 'CH' LIMIT 10;"
-        df = get_data(query_str)
-        
-        # Display the tables
-        st.write("Top 10 from Chicago Results")
+        df = init_data(dist)
         st.dataframe(df)
 
 if __name__ == '__main__':

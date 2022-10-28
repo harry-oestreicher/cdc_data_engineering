@@ -5,9 +5,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-
 # import streamlit.components.v1 as components
-
 # from pickle import load
 from src.dataio import get_data
 
@@ -56,7 +54,7 @@ with st.sidebar:
         ('Female', 'Male', 'Lizard'))
 
     if gender == 'Lizard':
-        st.write('I\'m sorry')
+        st.write('hi mark :/')
     else:
         st.write("Ahh a human! FINALLY!")
         
