@@ -4,14 +4,15 @@ import logging
 import streamlit as st
 import pandas as pd
 
-from src.dataio import init_data, enumerate_df
+from src.dataio import init_data, init_scope, enumerate_df
 from src.dictionaries import *
 from src.labels import survey_labels_dict
 
-
-
 st.set_page_config(layout="wide")
-st.markdown("# Youth Risk Behavior Survey (YRBS) Data Analysis")
+
+st.markdown("# YRBS Data Analysis")
+st.markdown("**Youth Risk Behavior Survey**")
+
 
 df = None
 with st.sidebar:
@@ -21,13 +22,35 @@ with st.sidebar:
     # age = st.radio('Age', ("12 years old or younger", "13 years old", "14 years old", "15 years old", "16 years old", "17 years old", "18 years old or older"))
 
     cols = survey_labels_dict
-    dist = st.radio('District:', ('NYC', 'CH', 'SF', 'ALL'))
-    btn =  st.button(f"Initialize dataset with {dist} District results")
-    if btn:
-        # re-initialize the database
-        df = init_data(dist)
-        # st.write(f"Shape: {df.shape}")
-        # st.write(f"Info: {df.info}")
+
+    # Data scope selection
+    scope = st.radio('Choose a Survey Scope:', ('DISTRICT', 'STATE', 'NATIONAL')) 
+    # scope_btn = st.button(f"Pull data from {scope} table(s)")
+    # if scope_btn:
+    #     insp, engine = init_scope(scope)
+
+    if scope == 'DISTRICT':
+        dist = st.radio('Choose a District:', ('NYC', 'CH', 'SF', 'ALL'))
+        btn =  st.button(f"Pull data for {dist} District(s)")
+        if btn:
+            df = init_data(scope,dist)
+            # st.write(f"Shape: {df.shape}")
+            # st.write(f"Info: {df.info}")
+
+    elif scope == 'STATE':
+        state = st.radio('Choose a State:', ('NY', 'CA', 'NV', 'AL'))
+        btn =  st.button(f"Pull data for {state} State(s)")
+        if btn:
+            df = init_data(scope,state)
+
+    elif scope == 'NATIONAL':
+        # nat = st.radio('Choose a District:', ('NYC', 'CH', 'SF', 'ALL'))
+        btn =  st.button(f"Pull data from National surveys")
+        if btn:
+            df = init_data(scope,scope)
+
+
+
 
     # options = st.multiselect(
     #     'Which questions to focus on?',

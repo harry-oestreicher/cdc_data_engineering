@@ -6,11 +6,6 @@ from src.dictionaries import *
 # from csv import writer
 from sqlalchemy import inspect, create_engine
 
-# Connect to the SQL database
-connection_string = 'sqlite:///data/yrbss_data.db'
-engine = create_engine(connection_string)
-insp = inspect(engine)
-# print(insp.get_table_names())
 
 def enumerate_df(data, col, dic):
     data=data.replace({f"{col}": dic})
@@ -19,7 +14,28 @@ def enumerate_df(data, col, dic):
     return data
 
 @st.cache
-def init_data(dist):
+def init_scope(scope):
+    """
+    Purpose:
+        Initialize the scope of data to be retrieved.
+
+    """
+    if scope == 'ALL':
+        connection_string = 'sqlite:///data/yrbss_data.db'
+    elif scope == 'NATIONAL':
+        connection_string = 'sqlite:///data/yrbss_nat_data.db'
+    elif scope == 'STATE':
+        connection_string = 'sqlite:///data/yrbss_state_data.db'
+    elif scope == 'DISTRICT':
+        connection_string = 'sqlite:///data/yrbss_dist_data.db'
+        
+    engine = create_engine(connection_string)
+    insp = inspect(engine)
+    return insp, engine
+
+
+@st.cache
+def init_data(scope, dist):
     """
     Purpose:
         Initialize system data from local CSV files for reproducability
@@ -29,13 +45,30 @@ def init_data(dist):
         Produces pandas DataFrames and corresponding SQL tables in SQLlite db file.
     
     """
+    if scope == 'ALL':
+        connection_string = 'sqlite:///data/yrbss_data.db'
+    elif scope == 'NATIONAL':
+        connection_string = 'sqlite:///data/yrbss_nat_data.db'
+    elif scope == 'STATE':
+        connection_string = 'sqlite:///data/yrbss_state_data.db'
+    elif scope == 'DISTRICT':
+        connection_string = 'sqlite:///data/yrbss_dist_data.db'
+        
+    engine = create_engine(connection_string)
+    # insp = inspect(engine)
+
     # Re-initialize the database
     if dist == 'ALL':
-        query_str = f"SELECT * FROM DISTRICT;"
+        query = f"SELECT * FROM {scope};"
     else:
-        query_str = f"SELECT * FROM DISTRICT WHERE `sitecode` = '{dist}';"
+        query = f"SELECT * FROM {scope} WHERE `sitecode` = '{dist}';"
     
-    df = get_data(query_str)
+    if dist == 'NATIONAL':
+        query = f"SELECT * FROM {scope};"
+
+    # df = get_data(query_str)
+    df = pd.read_sql_query(query, con=engine)
+
     df.drop(columns=["sitetype", "sitename", "sitetypenum", "survyear", "record"], inplace=True)
 
     demographic_df = df.iloc[:,0:23].copy().dropna().reset_index(drop=True)
@@ -50,7 +83,7 @@ def init_data(dist):
     df = enumerate_df(enumerate_df(df, "sex", sex_dict), "age", age_dict).copy()
     return df
 
-def get_data(query):
+def get_data(query, engine):
     """
     Purpose:
         To return a dataframe to be used on the caller's page.
@@ -61,6 +94,5 @@ def get_data(query):
 
     """
     df = pd.read_sql_query(query, con=engine)
-
 
     return df

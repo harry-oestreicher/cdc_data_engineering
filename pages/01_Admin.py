@@ -5,7 +5,7 @@ import streamlit as st
 from pathlib import Path
 
 # sys.path.append("..")
-from src.dataio import get_data, init_data
+from src.dataio import get_data
 
 # import streamlit.components.v1 as components
 # from sqlalchemy import inspect, create_engine
@@ -18,10 +18,10 @@ def main():
     st.markdown("description coming soon.")
     st.markdown("---")
     query_str="SELECT * FROM DISTRICT WHERE `sitecode` = 'CH' LIMIT 10;"
-    df = get_data(query_str)
+    # df = get_data(query_str)
 
-    st.write("Query: `SELECT * FROM DISTRICT WHERE 'sitecode' = 'CH' LIMIT 100;`")
-    st.dataframe(df)
+    # st.write("Query: `SELECT * FROM DISTRICT WHERE 'sitecode' = 'CH' LIMIT 100;`")
+    # st.dataframe(df)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.CRITICAL)
