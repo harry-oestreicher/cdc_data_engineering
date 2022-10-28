@@ -30,9 +30,13 @@ def init_data(dist):
     
     """
     # Re-initialize the database
-    query_str = f"SELECT * FROM DISTRICT WHERE `sitecode` = '{dist}';"
+    if dist == 'ALL':
+        query_str = f"SELECT * FROM DISTRICT;"
+    else:
+        query_str = f"SELECT * FROM DISTRICT WHERE `sitecode` = '{dist}';"
+    
     df = get_data(query_str)
-    df.drop(columns=["sitetype", "sitecode", "sitename", "sitetypenum", "survyear", "record"], inplace=True)
+    df.drop(columns=["sitetype", "sitename", "sitetypenum", "survyear", "record"], inplace=True)
 
     demographic_df = df.iloc[:,0:23].copy().dropna().reset_index(drop=True)
     responses_df = df.iloc[:,23:199].copy().dropna().reset_index(drop=True)
